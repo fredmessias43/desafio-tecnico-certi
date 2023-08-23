@@ -1,7 +1,20 @@
-<app-pokemon-input-search (pokemonFoundEvent)="handleNewPokemon($event)" />
+<div class="page" >
+  <div class="header-container">
+    <app-pokemon-input-search
+      class="input"
+      [disabled]="loading"
+      (pokemonFoundEvent)="handleNewPokemon($event)"
+      (pokemonNotFoundEvent)="newPokemonData = undefined"
+    />
 
-<app-pokemon-card *ngIf="newPokemonData" [pokemon]="newPokemonData" />
+    <app-pokemon-card *ngIf="newPokemonData" class="card" [pokemon]="newPokemonData" />
+      
+    <button class="btn" *ngIf="newPokemonData" (click)="insertInPokedex()" [disabled]="loading" >
+      <span *ngIf="loading" >capturando...</span>
+      <span *ngIf="!loading" >capturar pokemon</span>
+    </button>
+  </div>
 
-<button (click)="insertInPokedex()" >Adicionar à sua pokedex</button>
+  <app-pokemon-list />
+</div>
 
-<app-pokemon-list />

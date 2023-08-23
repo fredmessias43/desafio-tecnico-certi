@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import axios, { AxiosError } from 'axios';
 import { Pokemon } from 'src/types';
 
@@ -8,7 +8,9 @@ import { Pokemon } from 'src/types';
   styleUrls: ['./pokemon-input-search.component.scss']
 })
 export class PokemonInputSearchComponent {
+  @Input() disabled = false;
   @Output() pokemonFoundEvent = new EventEmitter<Pokemon>();
+  @Output() pokemonNotFoundEvent = new EventEmitter();
 
   error?: Error;
   empty: boolean = false;
@@ -45,6 +47,7 @@ export class PokemonInputSearchComponent {
         this.empty = status === 404;
         this.error = err;
       }
+      this.pokemonFoundEvent.emit();
     }
     this.loading = false;
   }

@@ -33,6 +33,7 @@ export class AppComponent {
       }
     }
 
+    this.newPokemonData = undefined;
     this.loading = false;
   }
 }

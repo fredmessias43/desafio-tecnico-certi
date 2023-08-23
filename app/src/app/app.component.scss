@@ -1,0 +1,22 @@
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  min-height: 16rem;
+
+
+  .input {
+    margin-bottom: 1rem;
+  }
+
+  .card {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    margin-bottom: 1rem;
+  }
+}

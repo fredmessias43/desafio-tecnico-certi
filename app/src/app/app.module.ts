@@ -7,8 +7,9 @@ import { PokemonInputSearchComponent } from './pokemon-input-search/pokemon-inpu
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { PokemonService } from './services/pokemon.service';
 
-const config: SocketIoConfig = { url: 'http://localhost:8080', options: {} };
+const config: SocketIoConfig = { url: 'ws://localhost:8080/', options: {} };
 
 @NgModule({
   declarations: [

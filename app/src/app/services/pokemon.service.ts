@@ -9,4 +9,8 @@ export class PokemonService {
   createdPokemon = this.socket.fromEvent<Pokemon>('pokemon.created');
 
   constructor(private socket: Socket) { }
+
+  onCreatedPokemon() {
+    return this.socket.fromEvent<Pokemon>('pokemon.created');
+  }
 }
