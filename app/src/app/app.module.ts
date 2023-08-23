@@ -8,8 +8,9 @@ import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { PokemonService } from './services/pokemon.service';
+import { environment } from 'src/environments/environment';
 
-const config: SocketIoConfig = { url: 'ws://localhost:8080/', options: {} };
+const config: SocketIoConfig = { url: environment.websocketsUrl, options: {} };
 
 @NgModule({
   declarations: [
