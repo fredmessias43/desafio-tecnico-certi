@@ -1,7 +1,11 @@
-.pokemon-list-container {
+.captured-pokemon-list-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.status {
+  text-align: center;
 }

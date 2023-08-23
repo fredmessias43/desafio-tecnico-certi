@@ -1,6 +1,6 @@
 import { IsEmail, IsNotEmpty, IsUrl } from 'class-validator';
 
-export class CreatePokemonDto {
+export class CreateCapturedPokemonDto {
   @IsNotEmpty()
   readonly name: string;
   

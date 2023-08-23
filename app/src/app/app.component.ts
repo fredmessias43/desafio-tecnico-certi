@@ -22,7 +22,7 @@ export class AppComponent {
     this.loading = true;
 
     try {
-      const res = await api.post("pokemons", {
+      const res = await api.post("captured_pokemons", {
         name: this.newPokemonData?.name,
         image_url: this.newPokemonData?.image_url,
       });

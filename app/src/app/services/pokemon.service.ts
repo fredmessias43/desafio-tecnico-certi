@@ -6,11 +6,11 @@ import { Pokemon } from 'src/types';
   providedIn: 'root'
 })
 export class PokemonService {
-  createdPokemon = this.socket.fromEvent<Pokemon>('pokemon.created');
+  createdPokemon = this.socket.fromEvent<Pokemon>('captured_pokemon.created');
 
   constructor(private socket: Socket) { }
 
   onCreatedPokemon() {
-    return this.socket.fromEvent<Pokemon>('pokemon.created');
+    return this.socket.fromEvent<Pokemon>('captured_pokemon.created');
   }
 }
