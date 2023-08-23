@@ -1,0 +1,5 @@
+<input type="text" (change)="inputChange($event)">
+<p *ngIf="empty">Desculpe mas esse pokemon não existe</p>
+<p *ngIf="loading">Carregando...</p>
+<p *ngIf="error">Desculpe mas ocorreu algum erro.</p>
+

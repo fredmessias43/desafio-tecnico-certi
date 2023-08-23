@@ -1,0 +1,9 @@
+<p *ngIf="pokemonList.length === 0 && !loading">Ainda não capturou nenhum pokemon</p>
+<p *ngIf="loading">Carregando pokemons capturados...</p>
+<p *ngIf="error">Desculpe mas ocorreu algum erro.</p>
+<div *ngIf="!loading" >
+  <app-pokemon-card
+    *ngFor="let pokemon of pokemonList"
+    [pokemon]="pokemon"
+  />
+</div>
